@@ -34,6 +34,8 @@ namespace Bank2025
             Accounts.Remove(number);
         }
 
+        // `TryGetValue` permet de vérifier si une clé existe dans un dictionnaire et de récupérer sa valeur en toute sécurité sans provoquer d’exception
+
         public double GetBalance(string number)
         {
             if (!Accounts.TryGetValue(number, out var acc))
